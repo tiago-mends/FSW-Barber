@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button } from "@/app/_components/ui/button";
 import { Barbershop } from "@prisma/client";
@@ -10,18 +10,27 @@ interface BarbershopInfoProps {
   barbershop: Barbershop;
 }
 
-const BarbershopInfo = ({barbershop}: BarbershopInfoProps) => {
+const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
   const router = useRouter();
-  const handleBackClick =() => router.back();
+  const handleBackClick = () => router.back();
 
-  return ( 
+  return (
     <div>
       <div className="h-[250px] w-full relative">
-        <Button size="icon" variant="outline" className="z-50 absolute top-4 left-4" onClick={handleBackClick}>
+        <Button
+          size="icon"
+          variant="outline"
+          className="z-50 absolute top-4 left-4"
+          onClick={handleBackClick}
+        >
           <ChevronLeftIcon />
         </Button>
 
-        <Button size="icon" variant="outline" className="z-50 absolute top-4 right-4">
+        <Button
+          size="icon"
+          variant="outline"
+          className="z-50 absolute top-4 right-4"
+        >
           <MenuIcon />
         </Button>
 
@@ -45,7 +54,7 @@ const BarbershopInfo = ({barbershop}: BarbershopInfoProps) => {
         </div>
       </div>
     </div>
-   );
-}
- 
+  );
+};
+
 export default BarbershopInfo;
