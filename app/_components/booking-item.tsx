@@ -5,9 +5,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 const BookingItem = () => {
   return (
     <Card>
-      <CardContent className="p-5 flex justify-between py-0">
+      <CardContent className="flex justify-between p-5 py-0">
         <div className="flex flex-col gap-2 py-5">
-          <Badge className="bg-[#221C3D] text-primary hover:bg-[#221C3D] w-fit">
+          <Badge className="w-fit bg-[#221C3D] text-primary hover:bg-[#221C3D]">
             Confirmado
           </Badge>
           <h2 className="font-bold capitalize">Corte de cabelo</h2>
@@ -22,7 +22,7 @@ const BookingItem = () => {
           </div>
         </div>
 
-        <div className="flex flex-col px-3 items-center justify-center border-l border-solid border-secondary">
+        <div className="flex flex-col items-center justify-center border-l border-solid border-secondary px-3">
           <p className="text-sm">Fevereiro</p>
           <div className="text-2xl">06</div>
           <p className="text-sm">09:45</p>

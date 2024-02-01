@@ -18,11 +18,11 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
 
   return (
     <div>
-      <div className="h-[250px] w-full relative">
+      <div className="relative h-[250px] w-full">
         <Button
           size="icon"
           variant="outline"
-          className="z-50 absolute top-4 left-4"
+          className="absolute left-4 top-4 z-50"
           onClick={handleBackClick}
         >
           <ChevronLeftIcon />
@@ -33,7 +33,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
             <Button
               variant="outline"
               size="icon"
-              className="z-50 absolute top-4 right-4"
+              className="absolute right-4 top-4 z-50"
             >
               <MenuIcon />
             </Button>
@@ -50,13 +50,13 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
         />
       </div>
 
-      <div className="px-5 py-3 pb-6 border-b border-solid border-secondary">
+      <div className="border-b border-solid border-secondary px-5 py-3 pb-6">
         <h1 className="text-xl font-bold">{barbershop.name}</h1>
-        <div className="flex items-center gap-1 mt-2">
+        <div className="mt-2 flex items-center gap-1">
           <MapPinIcon className="text-primary" size={18} />
           <p className="text-sm">{barbershop.address}</p>
         </div>
-        <div className="flex items-center gap-1 mt-2">
+        <div className="mt-2 flex items-center gap-1">
           <StarIcon className="text-primary" size={18} />
           <p className="text-sm">5,0 (999 avaliações)</p>
         </div>

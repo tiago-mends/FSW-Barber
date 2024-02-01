@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Badge } from "@/app/_components/ui/badge";
 import { Button } from "@/app/_components/ui/button";
@@ -16,17 +16,20 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
   const router = useRouter();
   const handleBookingClick = () => {
     router.push(`/barbershops/${barbershop.id}`);
-  }
+  };
 
   return (
     <Card className="min-w-[167px] max-w-[167px] rounded-2xl">
       <CardContent className="px-1 py-0">
-        <div className="px-1 w-full h-[159px] relative">
-          <div className="absolute top-2 left-2 z-50">
-          <Badge variant="secondary" className="flex gap-1 items-center opacity-90">
-            <StarIcon size={12} className="fill-primary text-primary" />
-            <span className="text-xs">5,0</span>
-          </Badge>
+        <div className="relative h-[159px] w-full px-1">
+          <div className="absolute left-2 top-2 z-50">
+            <Badge
+              variant="secondary"
+              className="flex items-center gap-1 opacity-90"
+            >
+              <StarIcon size={12} className="fill-primary text-primary" />
+              <span className="text-xs">5,0</span>
+            </Badge>
           </div>
           <Image
             src={barbershop.imageUrl}
@@ -38,14 +41,18 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
         </div>
 
         <div className="px-2 pb-3">
-          <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">
+          <h2 className="mt-2 overflow-hidden text-ellipsis text-nowrap font-bold">
             {barbershop.name}
           </h2>
-          <p className="text-sm text-gray-400 overflow-hidden text-ellipsis text-nowrap">
+          <p className="overflow-hidden text-ellipsis text-nowrap text-sm text-gray-400">
             {barbershop.address}
           </p>
 
-          <Button className="w-full mt-3" variant="secondary" onClick={handleBookingClick}>
+          <Button
+            className="mt-3 w-full"
+            variant="secondary"
+            onClick={handleBookingClick}
+          >
             Reservar
           </Button>
         </div>
