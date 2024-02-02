@@ -15,7 +15,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
   const isBookingConfirmed = isFuture(booking.date);
 
   return (
-    <Card>
+    <Card className="min-w-full">
       <CardContent className="flex p-0 py-0">
         <div className="flex flex-[3] flex-col gap-2 py-5 pl-5">
           <Badge
@@ -41,7 +41,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
             {format(booking.date, "MMMM", { locale: ptBR })}
           </p>
           <div className="text-2xl">{format(booking.date, "dd")}</div>
-          <p className="text-sm">{format(booking.date, "hh:m")}</p>
+          <p className="text-sm">{format(booking.date, "hh:mm")}</p>
         </div>
       </CardContent>
     </Card>
