@@ -106,7 +106,11 @@ const BookingItem = ({ booking }: BookingItemProps) => {
 
         <div className="px-5">
           <div className="relative mt-6 h-[180px] w-full">
-            <Image src="/map.png" fill alt={booking.barbershop.name} />
+            <Image
+              src="/barbershop-map.png"
+              fill
+              alt={booking.barbershop.name}
+            />
 
             <div className="absolute bottom-4 left-0 w-full px-5">
               <Card>
